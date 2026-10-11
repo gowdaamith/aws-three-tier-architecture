@@ -63,3 +63,16 @@ output "db_name" {
   description = "Application database name"
   value       = module.rds.db_name
 }
+
+output "internal_alb_dns_name" {
+  description = "Private DNS name of the internal ALB"
+  value       = module.internal_alb.internal_alb_dns_name
+}
+
+output "backend_target_group_arn" {
+  description = "Backend target group ARN"
+  value       = module.internal_alb.backend_target_group_arn
+}
+
+
+
